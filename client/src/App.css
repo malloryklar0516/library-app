@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --linkBlueHoverColor: rgb(0, 204, 255);
+    --homePageBackgroundColor: #b0ffce;
+    --signUpPageBackgroundColor: #e9b0ff;
+    --loginPageBackgroundColor: #b0efff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 5px;
+    width: 100%;
+    transition: 150ms ease-in-out;
+}
+
+body:has(.home) {
+    background: var(--homePageBackgroundColor);
+}
+body:has(.Signup) {
+    background: var(--signUpPageBackgroundColor);
+}
+body:has(.Login) {
+    background: var(--loginPageBackgroundColor);
+}
+
+#root {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    grid-gap: 15px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+}
+
+a:hover {
+    color: var(--linkBlueHoverColor);
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    grid-gap: 5px;
+    flex-direction: column;
+}
+
+form div {
+    display: flex;
+    grid-gap: 15px;
+}
+
+form div label {
+    min-width: 100px;
+}
+
+form div input {
+    width: 100%;
+}
+
+
+.booksContainer{
+    width:95%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap:wrap;
+}
+.books {
+
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.book {
+    width: 250px;
+    border: 1px solid gray;
+}
+
+.book img {
+    max-width: 250px;
+}
+
+.bookContent {
+    padding: 0 15px;
+}
